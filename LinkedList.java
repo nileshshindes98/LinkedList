@@ -7,17 +7,14 @@ public class LinkedList {
         this.head = null;
     }
 
-    // Method to insert a node at the end of the linked list
+    // Method to insert a node at the beginning of the linked list
     public void addFirstNode(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
         } else {
-            Node current = head;
-            while (current.next != null) {
-                current = current.next;
-            }
-            current.next = newNode;
+            newNode.next = head;
+            head = newNode;
         }
     }
 
