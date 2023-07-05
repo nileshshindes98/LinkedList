@@ -20,7 +20,16 @@ public class LinkedList {
             current.next = newNode;
         }
     }
+    // Method to delete the first element in the linked list
+    public void pop() {
+        if (head != null) {
+            head = head.next;
+        }
+    }
 
+
+    /*
+    UC-4
     // Method to insert a node between two existing nodes in the linked list
     public void insertNode(int prevData, int newData) {
         Node newNode = new Node(newData);
@@ -39,6 +48,7 @@ public class LinkedList {
             }
         }
     }
+     */
 
     // Method to display the linked list
     void printNode(){
