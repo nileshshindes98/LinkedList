@@ -21,6 +21,25 @@ public class LinkedList {
         }
     }
 
+    // Method to insert a node between two existing nodes in the linked list
+    public void insertNode(int prevData, int newData) {
+        Node newNode = new Node(newData);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current != null) {
+                if (current.data == prevData) {
+                    Node nextNode = current.next;
+                    current.next = newNode;
+                    newNode.next = nextNode;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+    }
+
     // Method to display the linked list
     void printNode(){
         Node temp = head; //assigned value of head to temp variable of node for travel
