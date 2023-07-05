@@ -10,7 +10,7 @@ public class Main {
         ls.appendNode(30);
         ls.appendNode(70);
 
-        ls.pop(); // Delete the first element
+        ls.popLast();
 
         System.out.println("LinkedList Sequence: ");
         ls.printNode();

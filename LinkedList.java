@@ -26,6 +26,18 @@ public class LinkedList {
             head = head.next;
         }
     }
+    // Method to delete the last element in the linked list
+    public void popLast() {
+        if (head == null || head.next == null) {
+            head = null;
+        } else {
+            Node current = head;
+            while (current.next.next != null) {
+                current = current.next;
+            }
+            current.next = null;
+        }
+    }
 
 
     /*
